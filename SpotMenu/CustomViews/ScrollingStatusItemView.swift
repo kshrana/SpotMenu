@@ -14,6 +14,7 @@ typealias StatusItemLengthUpdate = (CGFloat) -> ()
 class ScrollingStatusItemView: NSView {
     private enum Constants {
         static let padding: CGFloat = 6
+        static let bigSurCorrection: CGFloat = -22
         static let iconSize: CGFloat = 23
         static let defaultWidth: CGFloat = 150
         static let defaultSpeed: Double = 0.04
@@ -33,11 +34,18 @@ class ScrollingStatusItemView: NSView {
             guard let text = text else { return }
             scrollingTextView.setup(string: text)
 
+            var length = 0.00
+            
             if iconImageView.image == nil {
-                lengthHandler?(scrollingTextView.stringSize.width + Constants.padding)
+                length = scrollingTextView.stringSize.width + Constants.padding
             } else {
-                lengthHandler?(scrollingTextView.stringSize.width + Constants.iconSize + Constants.padding)
+                length = scrollingTextView.stringSize.width + Constants.iconSize + Constants.padding
             }
+            if #available(macOS 11.0, *) {
+                // Status bar padding has changed on Big Sur, correct for that
+                length += Constants.bigSurCorrection
+            }
+            lengthHandler?(length)
         }
     }
 

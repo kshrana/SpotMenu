@@ -18,7 +18,14 @@ import MusicPlayer
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private enum Constants {
         static let statusItemIconLength: CGFloat = 30
-        static let statusItemLength: CGFloat = 250
+        static let statusItemLengthBigSur: CGFloat = 220;
+        static var statusItemLength: CGFloat {
+            if #available(macOS 11.0, *) {
+                return Constants.statusItemLengthBigSur;
+            } else {
+                return 250;
+            }
+        }
     }
 
     // MARK: - Properties
