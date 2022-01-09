@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Sparkle
+// import Sparkle
 
 final class UpdatesPreferencesVC: NSViewController {
 
@@ -37,9 +37,9 @@ final class UpdatesPreferencesVC: NSViewController {
         moreInformation.stringValue = defaultMoreInformationText
         initButtonStates()
         initButtonHovers()
-        if SUUpdater.shared().lastUpdateCheckDate != nil {
-            lastUpdateCheckLabel.stringValue = SUUpdater.shared().lastUpdateCheckDate.asString()
-        }
+//        if SUUpdater.shared().lastUpdateCheckDate != nil {
+//            lastUpdateCheckLabel.stringValue = SUUpdater.shared().lastUpdateCheckDate.asString()
+//        }
     }
 
     private func initLabels() {
@@ -51,8 +51,8 @@ final class UpdatesPreferencesVC: NSViewController {
     }
 
     private func initButtonStates() {
-        automaticallyCheckForUpdatesButton.state = NSControl.StateValue(rawValue: SUUpdater.shared().automaticallyChecksForUpdates.asState)
-        automaticallyDownloadUpdatesButton.state = NSControl.StateValue(rawValue: SUUpdater.shared().automaticallyDownloadsUpdates.asState)
+//        automaticallyCheckForUpdatesButton.state = NSControl.StateValue(rawValue: SUUpdater.shared().automaticallyChecksForUpdates.asState)
+//        automaticallyDownloadUpdatesButton.state = NSControl.StateValue(rawValue: SUUpdater.shared().automaticallyDownloadsUpdates.asState)
     }
 
     private func initButtonHovers() {
@@ -66,18 +66,18 @@ final class UpdatesPreferencesVC: NSViewController {
     // MARK: - IBActions
 
     @IBAction func toggleAutomaticallyCheckForUpdates(_: Any) {
-        SUUpdater.shared().automaticallyChecksForUpdates = automaticallyCheckForUpdatesButton.state.asBool
+        // SUUpdater.shared().automaticallyChecksForUpdates = automaticallyCheckForUpdatesButton.state.asBool
     }
 
     @IBAction func toggleAutomaticallyDownloadUpdates(_: Any) {
-        SUUpdater.shared().automaticallyDownloadsUpdates = automaticallyDownloadUpdatesButton.state.asBool
+        // SUUpdater.shared().automaticallyDownloadsUpdates = automaticallyDownloadUpdatesButton.state.asBool
     }
 
     @IBAction func CheckForUpdates(_ sender: Any) {
-        SUUpdater.shared().checkForUpdates(sender)
-        if SUUpdater.shared().lastUpdateCheckDate != nil {
-            lastUpdateCheckLabel.stringValue = SUUpdater.shared().lastUpdateCheckDate.asString()
-        }
+//        SUUpdater.shared().checkForUpdates(sender)
+//        if SUUpdater.shared().lastUpdateCheckDate != nil {
+//            lastUpdateCheckLabel.stringValue = SUUpdater.shared().lastUpdateCheckDate.asString()
+//        }
     }
 }
 

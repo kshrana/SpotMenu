@@ -8,7 +8,7 @@
 
 import Cocoa
 import Foundation
-import Sparkle
+// import Sparkle
 
 final class StatusMenu {
 
