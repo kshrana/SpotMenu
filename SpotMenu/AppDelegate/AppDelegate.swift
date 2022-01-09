@@ -264,10 +264,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    @objc func checkForUpdates(_: NSMenuItem) {
-        // SUUpdater.shared().checkForUpdates(nil)
-    }
-
     // MARK: - Private methods
 
     private func loadSubviews() {

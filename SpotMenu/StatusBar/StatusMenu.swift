@@ -32,11 +32,6 @@ final class StatusMenu {
         )
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(
-            title: NSLocalizedString("Check for Updates...", comment: ""),
-            action: #selector(AppDelegate.checkForUpdates(_:)),
-            keyEquivalent: "")
-        )
-        menu.addItem(NSMenuItem(
             title: NSLocalizedString("Preferences...", comment: ""),
             action: #selector(AppDelegate.openPrefs(_:)),
             keyEquivalent: ",")

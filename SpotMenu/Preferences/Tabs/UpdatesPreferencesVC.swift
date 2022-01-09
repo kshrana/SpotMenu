@@ -21,8 +21,6 @@ final class UpdatesPreferencesVC: NSViewController {
     @IBOutlet fileprivate var automaticallyDownloadUpdatesButton: HoverButton!
     @IBOutlet fileprivate var lastUpdateCheckLabel: NSTextField!
     @IBOutlet fileprivate var moreInformation: NSTextField!
-    @IBOutlet var checkForUpdatesButton: NSButton!
-    @IBOutlet var lastCheckedLabel: NSTextField!
     @IBOutlet var withLoveFromKmikiy: NSTextField!
 
     // MARK: - Lifecycle methods
@@ -43,10 +41,7 @@ final class UpdatesPreferencesVC: NSViewController {
     }
 
     private func initLabels() {
-        automaticallyCheckForUpdatesButton.title = NSLocalizedString("Automatically check for updates", comment: "")
         automaticallyDownloadUpdatesButton.title = NSLocalizedString("Automatically download updates", comment: "")
-        lastCheckedLabel.stringValue = NSLocalizedString("Last checked:", comment: "")
-        checkForUpdatesButton.title = NSLocalizedString("Check for Updates", comment: "")
         withLoveFromKmikiy.stringValue = NSLocalizedString("with ♥ from kmikiy", comment: "")
     }
 
