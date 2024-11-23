@@ -1,9 +1,9 @@
-platform :osx, '10.11'
+platform :osx, '14.6'
 use_frameworks!
 
 target 'SpotMenu' do
    # pod 'Fabric'
    # pod 'Crashlytics'
    # pod 'Sparkle'
-    pod 'LoginServiceKit', :git => 'https://github.com/Sunnyyoung/LoginServiceKit.git'
+    pod 'LoginServiceKit', :git => 'https://github.com/Clipy/LoginServiceKit.git'
 end

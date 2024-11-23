@@ -1,21 +1,21 @@
 PODS:
-  - LoginServiceKit (2.2.1)
+  - LoginServiceKit (2.5.0)
 
 DEPENDENCIES:
-  - LoginServiceKit (from `https://github.com/Sunnyyoung/LoginServiceKit.git`)
+  - LoginServiceKit (from `https://github.com/Clipy/LoginServiceKit.git`)
 
 EXTERNAL SOURCES:
   LoginServiceKit:
-    :git: https://github.com/Sunnyyoung/LoginServiceKit.git
+    :git: https://github.com/Clipy/LoginServiceKit.git
 
 CHECKOUT OPTIONS:
   LoginServiceKit:
-    :commit: 04a1379908432bc4e304b38c831d573b1943b3fa
-    :git: https://github.com/Sunnyyoung/LoginServiceKit.git
+    :commit: ad922de0efe2384b561375d4d5344e1e932c116d
+    :git: https://github.com/Clipy/LoginServiceKit.git
 
 SPEC CHECKSUMS:
-  LoginServiceKit: e39022a6ea6169b3716fc3c43e89b2e7fd12f222
+  LoginServiceKit: 87c3d42ddb80d39ee8ea6b7a93f8c654ff58781b
 
-PODFILE CHECKSUM: a74738802732ffdd0ef69dc73fa451d4342e5507
+PODFILE CHECKSUM: 4b794de3b1949dbb9fe9f1451ec54460bb6ec601
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.16.2
